@@ -1,0 +1,12 @@
+{
+  "waiting": {
+    "for_agent": "Veuillez patienter, un agent va vous joindre..."
+  },
+  "toaster": {
+    "title": "Besoin d'aide ? Cliquez pour une vidéo ",
+    "intro": "La conversation en vidéo est vraiment sympa. Essayez !",
+    "username": "Votre nom : ",
+    "helpYou": "Comment pouvons-nous vous aider ?",
+    "chatNow": "Démarrer"
+  }
+}

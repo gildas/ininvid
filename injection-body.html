@@ -1,0 +1,36 @@
+<div id="ininvid-footer">
+  <div id="ininvid-chatContainer">
+    <img id="ininvid-availableImage" src="ininvid/img/dot_available_10.png" title="Agents available now"/>
+    <span data-localize="toaster.title">
+      Need help? Click to video chat with an agent now
+    </span>
+  </div>
+  <div id="ininvid-chatPeek"/>
+  <div id="ininvid-chatDetails">
+    <div id="ininvid-chatDetailsContent">
+      <span id="ininvid-introText" data-localize="toaster.intro">
+        Video chat is really cool. You should totally click the button to start a session.
+      </span>
+      <div id="ininvid-userInfo">
+        <label for="ininvid-displayName" data-localize="toaster.username">Your name: </label><br />
+        <input type="text" id="ininvid-displayName"/><br/>
+        <span data-localize="toaster.helpYou">What can we help you with?</span> <br/>
+        <select id="ininvid-reason"/>
+      </div>
+      <div id="ininvid-chatNow">
+        <a id="ininvid-chatNowLink" href="#">
+          <!-- WEBCAM IMAGE SOURCE: http://www.fotolia.com/id/36651503 -->
+          <img id="ininvid-chatNowImage" src="ininvid/img/webcam_50.png" alt=""/>
+          <span id="ininvid-chatNowText" data-localize="toaster.chatNow">
+            Chat Now
+          </span>
+        </a>
+      </div>
+      <div style="clear:both"/>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  // Load the translation except if we are in English (as the strings are already in English)
+  $("[data-localize]").localize("ininvid", { pathPrefix: "ininvid", skipLanguage: /^en/ });
+</script>

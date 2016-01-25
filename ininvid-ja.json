@@ -1,0 +1,14 @@
+{
+  "waiting": {
+    "for_agent":        "何かお困りですか？ビデオチャットで気軽にご相談ください。"
+  },
+  "toaster": {
+    "title":            "ビデオチャットへようこそ！",
+    "available_agents": "オペレータが空いています!",
+    "intro":            "ビデオチャットは本当にクールです。Chat Nowボタンをクリックして開始してください。",
+    "username":         "お名前:",
+    "helpYou":          "ご希望のサポート",
+    "default_reason":   "リクエスト",
+    "chatNow":          "Chat Now"
+  }
+}

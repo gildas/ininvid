@@ -31,7 +31,7 @@
 /*
 <body>
 ...
-  <div id="ininvid"/>
+  <div id="ininvid"></div>
 ...
 </body>
 */

@@ -37,6 +37,7 @@ To use and configure the ININ Vidyo integration, add the following code the *hea
         { text:'Website Help',     value:'vidyo'   }
       ];
 </script>
+<!-- ININVID: Configuration }}} -->
 ```
 
 If you want to force the language (and not let JAvascript detect it), change the data-localize lize with:
@@ -52,6 +53,18 @@ If you want to force the language (and not let JAvascript detect it), change the
 
 # ACD On Hold configuration:
 In the body of your HTML page, place a <div id="ininvid"> where you want to display information while waiting for an agent.
+
+```html
+<body>
+  My super website text...
+  ...
+  ...
+<!-- ININVID: ACD Wait {{{ -->
+  <div id="ininvid"></div>
+<!-- ININVID: ACD Wait }}} -->
+
+</body>
+```
 
 You can configure the images that are displayed while waiting for an agent in the "carroussel" variables.
 

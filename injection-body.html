@@ -32,5 +32,12 @@
 </div>
 <script type="text/javascript">
   // Load the translation except if we are in English (as the strings are already in English)
-  $("[data-localize]").localize("ininvid", { pathPrefix: "ininvid", skipLanguage: /^en/ });
+  var ininvid_l18n_options = { pathPrefix: "ininvid", skipLanguage: /^en/ };
+
+  if (ininvid_language != undefined && ininvid_language.length > 0)
+  {
+    console.debug('[ININVID] Loading language %s', ininvid_language);
+    ininvid_l18n_options['language'] = ininvid_language;
+  }
+  $("[data-localize]").localize("ininvid", ininvid_l18n_options);
 </script>

@@ -18,7 +18,7 @@ git clone https://github.com/gildas/ininvid.git ininvid
 
 ## Usage
 
-To use and configure the ININ Vidyo integration, add the following code the *head* section of your HTML page, like this:  
+To use and configure the ININ Vidyo integration, add the following code to the *head* section of your HTML page, like this:  
 
 ```html
 <!-- ININVID: Configuration {{{ -->
@@ -27,9 +27,7 @@ To use and configure the ININ Vidyo integration, add the following code the *hea
 <script type="text/javascript" src="ininvid/jquery.localize.min.js"></script>
 <script type="text/javascript" src="ininvid/injector.js" charset="utf-8"></script>
 <script type="text/javascript">
-  // Load the translation except if we are in English (as the strings are already in English)
-  $("[data-localize]").localize("ininvid", { skipLanguage: /^en/ })
-  var ininvid_serverRoot  = 'http://www.demo.apac.inin.com/vidyo-bridge';
+  var ininvid_serverRoot  = 'http://www.acme.com/vidyo-bridge';
   var ininvid_displayName = 'Guest';
   var ininvid_reasons = [
         { text:'Customer Service', value:'support' },
@@ -40,10 +38,12 @@ To use and configure the ININ Vidyo integration, add the following code the *hea
 <!-- ININVID: Configuration }}} -->
 ```
 
-If you want to force the language (and not let JAvascript detect it), change the data-localize lize with:
+If you want to force the language (and not let Javascript detect it), add a new variable with the [ISO 639-1][https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes] code:
 
 ```javascript
-  $("[data-localize]").localize("ininvid", { language: "ja", skipLanguage: /^en/ })
+  var ininvid_language    = 'ja'
+  var ininvid_serverRoot  = 'http://www.acme.com/vidyo-bridge';
+  . . .
 ```
 
 # Notes:

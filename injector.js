@@ -40,6 +40,10 @@
 // Customizable Configuration
 // ***************************************************************************
 
+// The language used for displaying the toaster and other messages
+// Leave to undefined to let the browser detect
+var ininvid_language = undefined;
+
 // This is the URL of your Vidyo portal
 var ininvid_serverRoot = 'http://www.acme.com:8000';
 

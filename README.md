@@ -18,7 +18,7 @@ git clone https://github.com/gildas/ininvid.git ininvid
 
 ## Usage
 
-To use and configure the ININ Vidyo integration, add the following code the *head* section of your HTML page, like this:  
+To use and configure the ININ Vidyo integration, add the following code to the *head* section of your HTML page, like this:  
 
 ```html
 <!-- ININVID: Configuration {{{ -->

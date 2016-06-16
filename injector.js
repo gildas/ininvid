@@ -74,7 +74,7 @@ var ininvid_OnErrorRedirectAfterMs = 10000;
 // NON Customizable Configuration
 // Warning: DO NOT modify the values below
 // ***************************************************************************
-var ininvid_version           = '0.1.2';
+var ininvid_version           = '0.1.3';
 var ininvid_cookieName        = 'ininvid_sessionData';
 var ininvid_displayNameLoaded = true;
 var ininvid_statusAreaId      = '#ininvid';
@@ -83,9 +83,33 @@ var ininvid_toasterId         = '#ininvid-footer';
 // ***************************************************************************
 // Code {{{
 
+// Extending jQuery to read HREF's parameters {{{
+$.extend({
+  get_url_params: function(){
+    var parameters  = [];
+    var start       = window.location.href.indexOf('?');
+
+    if (start > -1) {
+      window.location.href.slice(start + 1).split('&').forEach(function(pair) {
+        if (pair.length > 0) {
+          var parameter = pair.split('=');
+
+          parameters[parameter[0]] = parameter.slice(1).join('=') || true;
+        }
+      });
+    }
+    return parameters;
+  },
+  get_url_param: function(param){
+    return $.get_url_params()[param];
+  },
+}); // }}}
+
 // Main injection function {{{
 $(document).ready(function()
 {
+  if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang'); }
+  if (ininvid_language !== undefined) { console.log('[ININVID] Toaster Language: %s', ininvid_language); }
   $.get('ininvid/injection-head.html', function(data) { $('head').append(data); });
   if ($('#ininvid') == undefined) $('body').append('<div id="ininvid"/>')
   $('#ininvid').append('<div id="ininvid-headerMessage"/>')

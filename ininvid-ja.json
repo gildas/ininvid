@@ -4,7 +4,9 @@
   },
   "toaster": {
     "title":            "ビデオチャットで気軽に相談！",
-    "available_agents": "エージェントが空いています!",
+    "available_agents": {
+      "title": "エージェントが空いています!"
+    },
     "intro":            "チャットボタンで開始します。",
     "username":         "お名前:",
     "helpYou":          "ご希望のサポート",

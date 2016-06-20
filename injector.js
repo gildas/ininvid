@@ -108,7 +108,7 @@ $.extend({
 // Main injection function {{{
 $(document).ready(function()
 {
-  if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang'); }
+  if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang') || $('html').attr('lang'); }
   if (ininvid_language !== undefined) { console.log('[ININVID] Toaster Language: %s', ininvid_language); }
   $.get('ininvid/injection-head.html', function(data) { $('head').append(data); });
   if ($('#ininvid') == undefined) $('body').append('<div id="ininvid"/>')

@@ -121,7 +121,9 @@
 
 #ininvid-chatNowImage {
   display: block;
-  margin: 2px auto;
+  margin:  2px auto;
+  width:   50px;
+  height:  50px;
 }
 
 #ininvid-chatNowText {

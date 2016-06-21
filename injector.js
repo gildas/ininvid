@@ -74,7 +74,7 @@ var ininvid_OnErrorRedirectAfterMs = 10000;
 // NON Customizable Configuration
 // Warning: DO NOT modify the values below
 // ***************************************************************************
-var ininvid_version           = '0.1.3';
+var ininvid_version           = '0.1.4';
 var ininvid_cookieName        = 'ininvid_sessionData';
 var ininvid_displayNameLoaded = true;
 var ininvid_statusAreaId      = '#ininvid';
@@ -108,7 +108,7 @@ $.extend({
 // Main injection function {{{
 $(document).ready(function()
 {
-  if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang'); }
+  if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang') || $('html').attr('lang'); }
   if (ininvid_language !== undefined) { console.log('[ININVID] Toaster Language: %s', ininvid_language); }
   $.get('ininvid/injection-head.html', function(data) { $('head').append(data); });
   if ($('#ininvid') == undefined) $('body').append('<div id="ininvid"/>')

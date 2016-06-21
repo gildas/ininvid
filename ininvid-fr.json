@@ -4,6 +4,9 @@
   },
   "toaster": {
     "title": "Besoin d'aide ? Cliquez pour une vidéo ",
+    "available_agents": {
+      "title": "Il y a des agents disponibles !"
+    },
     "intro": "La conversation en vidéo est vraiment sympa. Essayez !",
     "username": "Votre nom : ",
     "helpYou": "Comment pouvons-nous vous aider ?",

@@ -115,7 +115,7 @@ var ininvid_carrouselRotationIntervalMs = 10000;
 
 ## Authors/Contributors
 
-[Gildas Cherruel](https://github.com/gildas) [![endorse](https://api.coderwall.com/gildas/endorsecount.png)](https://coderwall.com/gildas)
+[Gildas Cherruel](https://github.com/gildas)
 
 ## License
 

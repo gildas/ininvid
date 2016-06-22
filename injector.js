@@ -3,10 +3,10 @@
 // To use and configure the ININ Vidyo integration, add the following code the head of your HTML page, like this:
 /*
 <!-- ININVID: Configuration {{{ -->
-<script type="text/javascript" src="ininvid/jquery-2.1.1.js"></script>
-<script type="text/javascript" src="ininvid/jquery.cookie-1.4.1.min.js"></script>
-<script type="text/javascript" src="ininvid/jquery.localize.min.js"></script>
-<script type="text/javascript" src="ininvid/injector.js" charset="utf-8"></script>
+<script type="text/javascript" src="/ininvid/jquery-2.1.1.js"></script>
+<script type="text/javascript" src="/ininvid/jquery.cookie-1.4.1.min.js"></script>
+<script type="text/javascript" src="/ininvid/jquery.localize.min.js"></script>
+<script type="text/javascript" src="/ininvid/injector.js" charset="utf-8"></script>
 <script type="text/javascript">
   // Load the translation except if we are in English (as the strings are already in English)
   $("[data-localize]").localize("example", { skipLanguage: /^en/ })
@@ -55,26 +55,26 @@ var ininvid_messageWaitingForAgent = 'Please wait for an agent to join...';
 
 // The images to display in the carrousel while waiting for an agent
 var ininvid_carrouselImagePaths = [
-  "ininvid/img/banners/0411_CCVideoInterview_banner.gif",
-  "ininvid/img/banners/CaaSFaster_Banner_728x90_0714.gif",
-  "ininvid/img/banners/CaaSFlexible_Banner_728x90_0714.gif",
-  "ininvid/img/banners/CaaSMigrate_Banner_728x90_0714.gif",
-  "ininvid/img/banners/CaaSMinimal_Banner_728x90_0714.gif",
-  "ininvid/img/banners/CloudComm_banner_728x90_0714.gif"
+  "/ininvid/img/banners/0411_CCVideoInterview_banner.gif",
+  "/ininvid/img/banners/CaaSFaster_Banner_728x90_0714.gif",
+  "/ininvid/img/banners/CaaSFlexible_Banner_728x90_0714.gif",
+  "/ininvid/img/banners/CaaSMigrate_Banner_728x90_0714.gif",
+  "/ininvid/img/banners/CaaSMinimal_Banner_728x90_0714.gif",
+  "/ininvid/img/banners/CloudComm_banner_728x90_0714.gif"
 ];
 // The amount of milli-seconds between two images in the carrousel
 var ininvid_carrouselRotationIntervalMs = 10000;
 
 // When an error occurs, the URL to redirect to (if empty or undefined no redirection happens)
 var ininvid_OnErrorRedirectTo      = "http://www.inin.com";
-var ininvid_errorImagePath         = "ininvid/img/tumbeasts/something_broken.png";
+var ininvid_errorImagePath         = "/ininvid/img/tumbeasts/something_broken.png";
 var ininvid_OnErrorRedirectAfterMs = 10000;
 
 // ***************************************************************************
 // NON Customizable Configuration
 // Warning: DO NOT modify the values below
 // ***************************************************************************
-var ininvid_version           = '0.1.4';
+var ininvid_version           = '0.1.5';
 var ininvid_cookieName        = 'ininvid_sessionData';
 var ininvid_displayNameLoaded = true;
 var ininvid_statusAreaId      = '#ininvid';
@@ -110,12 +110,12 @@ $(document).ready(function()
 {
   if (ininvid_language === undefined) { ininvid_language = $.get_url_param('lang') || $('html').attr('lang'); }
   if (ininvid_language !== undefined) { console.log('[ININVID] Toaster Language: %s', ininvid_language); }
-  $.get('ininvid/injection-head.html', function(data) { $('head').append(data); });
+  $.get('/ininvid/injection-head.html', function(data) { $('head').append(data); });
   if ($('#ininvid') == undefined) $('body').append('<div id="ininvid"/>')
   $('#ininvid').append('<div id="ininvid-headerMessage"/>')
   $('#ininvid').append('<div id="ininvid-header"/>')
   $('#ininvid').append('<div id="ininvid-main"/>')
-  $.get('ininvid/injection-body.html', function(data)
+  $.get('/ininvid/injection-body.html', function(data)
   {
     $('body').append(data);
     var ininvid_sessionData = $.cookie(ininvid_cookieName);

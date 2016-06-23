@@ -87,17 +87,8 @@ var ininvid_toasterId         = '#ininvid-footer';
 $.extend({
   get_url_params: function(){
     var parameters  = [];
-    var start       = window.location.href.indexOf('?');
 
-    if (start > -1) {
-      window.location.href.slice(start + 1).split('&').forEach(function(pair) {
-        if (pair.length > 0) {
-          var parameter = pair.split('=');
-
-          parameters[parameter[0]] = parameter.slice(1).join('=') || true;
-        }
-      });
-    }
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { parameters[key] = decodeURIComponent(value); });
     return parameters;
   },
   get_url_param: function(param){

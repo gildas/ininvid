@@ -59,7 +59,7 @@
   height: 24px;
   border-radius: 5px 5px 0 0;
   background-color: #C29123;
-  background-image: url('img/fadebg_1x24.png');
+  background-image: url('../img/fadebg_1x24.png');
   background-repeat: repeat-x;
   cursor: help;
 }

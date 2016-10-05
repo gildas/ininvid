@@ -74,7 +74,7 @@ var ininvid_OnErrorRedirectAfterMs = 10000;
 // NON Customizable Configuration
 // Warning: DO NOT modify the values below
 // ***************************************************************************
-var ininvid_version           = '0.1.5';
+var ininvid_version           = '0.1.6';
 var ininvid_cookieName        = 'ininvid_sessionData';
 var ininvid_displayNameLoaded = true;
 var ininvid_statusAreaId      = '#ininvid';
